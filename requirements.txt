@@ -1,0 +1,5 @@
+PyPDF2==3.0.1
+regex==2025.9.18
+RPLCD==1.4.0
+smbus==1.1.post2
+smbus2==0.5.0

@@ -1,4 +1,4 @@
-#!/home/pi/ebooks/venv/bin/python3
+#!/home/pi/QuickEbookReader/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

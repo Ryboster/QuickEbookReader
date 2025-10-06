@@ -2,7 +2,15 @@ from RPLCD.i2c import CharLCD
 from time import sleep
 from PyPDF2 import PdfReader
 import re
+from sys import argv
 
+try:
+    script, pdf_filepath = argv
+except ValueError:
+    print("No filepath specified. Please provide path to a PDF file.\n")
+    print("Syntax:\n\t python3 script.py path/to/file.pdf\n")
+    exit(0) 
+    
 ###
 ### This script connects to an LCD connected to your board's I2C bus.
 ### It then reads an ebook in PDF format and displays it word-by-word
@@ -68,5 +76,5 @@ class QuickEbookReader():
         
 if __name__ == "__main__":
     reader = QuickEbookReader(230, 0.075)
-    reader.read_ebook("example.pdf")
+    reader.read_ebook(pdf_filepath)
     reader.display_ebook()
